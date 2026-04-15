@@ -1,4 +1,61 @@
-export function H3Custom({label, cfont, paddingTop, color}) {
+export function H0Custom({label, cfont, paddingTop, color}) {
+  return (
+    <h0
+      style={{
+        color: color,
+        // background: "black",
+        textAlign: "center",
+        fontFamily: cfont,
+        whiteSpace: "pre-line",
+        // fontSize: "50px",
+        margin: 0,
+        // padding: 20,
+        paddingTop: paddingTop,
+        width: "100%",
+      }}
+    >{label}</h0>
+  )
+}
+
+export function H1Custom({ label, cfont, paddingTop, color }) {
+  return (
+    <h1
+      style={{
+        color: color,
+        // background: "black",
+        textAlign: "center",
+        fontFamily: cfont,
+        whiteSpace: "pre-line",
+        // fontSize: "50px",
+        margin: 0,
+        // padding: 20,
+        paddingTop: paddingTop,
+        width: "100%",
+      }}
+    >{label}</h1>
+  )
+}
+
+export function H2Custom({ label, cfont, paddingTop, color }) {
+  return (
+    <h2
+      style={{
+        color: color,
+        // background: "black",
+        textAlign: "center",
+        fontFamily: cfont,
+        whiteSpace: "pre-line",
+        // fontSize: "50px",
+        margin: 0,
+        // padding: 20,
+        paddingTop: paddingTop,
+        width: "100%",
+      }}
+    >{label}</h2>
+  )
+}
+
+export function H3Custom({ label, cfont, paddingTop, color }) {
   return (
     <h3
       style={{
@@ -7,7 +64,7 @@ export function H3Custom({label, cfont, paddingTop, color}) {
         textAlign: "center",
         fontFamily: cfont,
         whiteSpace: "pre-line",
-        fontSize: "50px",
+        // fontSize: "50px",
         margin: 0,
         // padding: 20,
         paddingTop: paddingTop,
@@ -17,7 +74,7 @@ export function H3Custom({label, cfont, paddingTop, color}) {
   )
 }
 
-export function H4Custom({label, cfont, paddingTop, color}) {
+export function H4Custom({label, cfont, paddingTop, color, fontSize}) {
   return (
     <h4
       style={{
@@ -26,7 +83,7 @@ export function H4Custom({label, cfont, paddingTop, color}) {
         textAlign: "center",
         fontFamily: cfont,
         whiteSpace: "pre-line",
-        fontSize: "50px",
+        fontSize: fontSize,
         margin: 0,
         // padding: 20,
         paddingTop: paddingTop,
@@ -64,5 +121,15 @@ export function CText({label}) {
       }}>
       {label}
     </div>
+  )
+}
+
+export function CLink({ label, link, color, fontSize }) {
+  return (
+    <a href={link}
+      style={{
+        color: color,
+        fontSize: fontSize
+      }}>{label}</a>
   )
 }

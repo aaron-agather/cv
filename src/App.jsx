@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {  } from './comp/button'
-import { H3Custom, H4Custom, SectionName, CText } from './comp/text';
+import { H0Custom, H1Custom, H2Custom, H3Custom, H4Custom, SectionName, CText, CLink } from './comp/text';
 import { CCircle, Line } from './comp/shapes';
 import { CSpacer, ListToView } from './comp/utils';
 import './App.css'
@@ -10,8 +10,14 @@ function App() {
   return (
     <section id="parent">
       <section id="left">
-        <H3Custom label="Aaron" cfont="Anurati" paddingTop="20px" color="white"/>
-        <H3Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" />
+        <H4Custom label="Aaron" cfont="Anurati" paddingTop="20px" color="white" fontSize={50}/>
+        <H4Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" fontSize={50}/>
+        <CSpacer height={50} />
+        <SectionName label="contact" />
+        <Line />
+        <H3Custom label="+45 71 54 38 03" color="white" />
+        <CLink label="aaroagather@gmail.com" color="white" fontSize={20} link="mailto:aaroagather@gmail.com" />        
+        
         <CSpacer height={50} />
         <SectionName label="skills" />
         <Line />
@@ -31,13 +37,13 @@ function App() {
           list={[
             { name: "German", progress: 100 },
             { name: "English", progress: 100 },
-            { name: "Danish", progress: 20}
+            { name: "Danish", progress: 20 }
         ]}
         />
       </section>
       <section id="right">
-        <H4Custom label="About Me" />
-        
+        <H4Custom label="PROFILE" fontSize={50} />
+        <CText label={``} />
       </section>
 
       <div className="ticks"></div>
