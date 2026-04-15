@@ -1,0 +1,38 @@
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+body {
+    width: 210mm;
+    margin: 0 auto;
+}
+
+/* Screen preview (optional) */
+@media screen {
+    body {
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    html {
+        background: #152136;
+    }
+}
+
+/* Print-specific rules */
+@media print {
+    html, body {
+        background: white;
+        box-shadow: none;
+    }
+}
+
+
+#center {
+    display: flex;
+}
+
+button {
+    background: red;
+}
