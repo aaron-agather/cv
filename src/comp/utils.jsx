@@ -1,7 +1,10 @@
-export function CSpacer({height}) {
+export function CSpacer({height="20px"}) {
   return <section
     style={{
       height: height,
+      width: "100%",
+      // background: "yellow",
+      position: "relative"
     }}>
   </section>
 }

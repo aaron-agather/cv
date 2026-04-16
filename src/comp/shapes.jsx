@@ -15,13 +15,20 @@ export function CCircle() {
   )
 }
 
-export function Line() {
+export function Line({color="purple"}) {
   return (
-    <svg width="100%" height="2"
+    <div
       style={{
-        margin: 0,
+        height: "auto",
+        display: "flex",
+        placeContent: "center"
       }}>
-      <rect height="2" width="100%" fill="purple"></rect>
-    </svg>
+      <svg width="80%" height="2"
+        style={{
+          margin: 0,
+        }}>
+        <rect height="2" width="100%" fill={color}></rect>
+      </svg>
+    </div>
   )
 }

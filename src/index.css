@@ -27,12 +27,3 @@ body {
         box-shadow: none;
     }
 }
-
-
-#center {
-    display: flex;
-}
-
-button {
-    background: red;
-}

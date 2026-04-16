@@ -55,13 +55,13 @@ export function H2Custom({ label, cfont, paddingTop, color }) {
   )
 }
 
-export function H3Custom({ label, cfont, paddingTop, color }) {
+export function H3Custom({ label, cfont, paddingTop, color, position="center" }) {
   return (
     <h3
       style={{
         color: color,
-        // background: "black",
-        textAlign: "center",
+        marginLeft: "10px",
+        textAlign: position,
         fontFamily: cfont,
         whiteSpace: "pre-line",
         // fontSize: "50px",
@@ -74,14 +74,15 @@ export function H3Custom({ label, cfont, paddingTop, color }) {
   )
 }
 
-export function H4Custom({label, cfont, paddingTop, color, fontSize, uppdercase=false}) {
+export function H4Custom({label, cfont, paddingTop, color, fontSize, uppdercase=false, position="center"}) {
   if (uppdercase) {
     return (
       <h4
         style={{
+          position: "relative",
           color: color,
           // background: "black",
-          textAlign: "center",
+          textAlign: position,
           fontFamily: cfont,
           whiteSpace: "pre-line",
           fontSize: fontSize,
@@ -112,23 +113,55 @@ export function H4Custom({label, cfont, paddingTop, color, fontSize, uppdercase=
   )
 }
 
-export function SectionName({ label }) {
+export function SectionName({ label, cfont, paddingTop, color, fontSize, uppdercase=false, position="center" }) {
+  if (uppdercase) {
+    return (
+      <div
+        style={{
+          height: "auto",
+          display: "flex",
+          placeContent: position
+        }}>
+        <h4
+          style={{
+            position: "relative",
+            color: color,
+            textAlign: position,
+            fontFamily: cfont,
+            whiteSpace: "pre-line",
+            fontSize: fontSize,
+            margin: 0,
+            marginLeft: "10px",
+            paddingTop: paddingTop,
+            width: "100%",
+            textTransform: "uppercase"
+          }}
+        >{label}</h4>
+      </div>
+    )
+  }
   return (
-    <h5
+    <div
       style={{
-        color: "color-mix(in oklab, white, purple 50%)",
-        // textShadow: `
-        //     -1px -1px 0 white,
-        //     1px -1px 0 white,
-        //     -1px  1px 0 white,
-        //     1px  1px 0 white
-        //   `,
-        textTransform: "uppercase",
-        fontSize: "20px",
-        margin: "0",
-        marginTop: "20px",
-      }}
-    >{label}</h5>
+        height: "auto",
+        display: "flex",
+        placeContent: position
+      }}>
+      <h4
+        style={{
+          position: "relative",
+          color: color,
+          fontFamily: cfont,
+          whiteSpace: "pre-line",
+          fontSize: fontSize,
+          margin: 0,
+          paddingTop: paddingTop,
+          width: "auto",
+          marginBottom: 0,
+          paddingBottom: 0,
+        }}
+      >{label}</h4>
+    </div>
   )
 }
 
@@ -136,7 +169,11 @@ export function CText({label}) {
   return (
     <div
       style={{
-        whiteSpace: "pre-line"
+        position: "relative",
+        whiteSpace: "pre-line",
+        padding: "0 40px",   // 👈 THIS
+        maxWidth: "900px",   // 👈 optional but clean
+        margin: "0 auto" 
       }}>
       {label}
     </div>
@@ -145,10 +182,46 @@ export function CText({label}) {
 
 export function CLink({ label, link, color, fontSize }) {
   return (
-    <a href={link}
+    <a
+      href={link}
       style={{
+        // display: "inline-block", // THIS is the fix
         color: color,
-        fontSize: fontSize
-      }}>{label}</a>
+        fontSize: fontSize,
+        position: "relative",
+        margin: "5px",
+        padding: "5px 10px", // give it breathing room
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        // textDecoration: "none", // optional but cleaner
+      }}
+    >
+      {label}
+    </a>
+  );
+}
+
+export function TextWithBox({ label, color, backgroundColor, textPosition }) {
+  return (
+    <div style={{
+      display: "flex",
+      marginLeft: "10px",
+      justifyContent: textPosition,
+      height: "auto",
+      alignItems: "flex-start",
+    }}>
+      <h6
+        style={{
+          padding: "4px",
+          textAlign: "center",
+          color,
+          backgroundColor,
+          borderRadius: "5px",
+          margin: 0,
+        }}>
+      {label}
+      </h6>
+    </div>
   )
 }

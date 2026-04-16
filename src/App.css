@@ -7,7 +7,6 @@
 
 #parent {
     display: flex;
-    /*height: 100vh;*/
 }
 
 #left {
@@ -19,18 +18,13 @@
     gap: 10px;
     align-items: center;
     min-height: 100vh;
+    /*overflow: hidden*/
 }
 
 
 #right {
     position: relative;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    justify-content: center;
-    align-items: center;
     width: 200px;
     height: 200px;
 }
