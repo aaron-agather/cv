@@ -74,7 +74,26 @@ export function H3Custom({ label, cfont, paddingTop, color }) {
   )
 }
 
-export function H4Custom({label, cfont, paddingTop, color, fontSize}) {
+export function H4Custom({label, cfont, paddingTop, color, fontSize, uppdercase=false}) {
+  if (uppdercase) {
+    return (
+      <h4
+        style={{
+          color: color,
+          // background: "black",
+          textAlign: "center",
+          fontFamily: cfont,
+          whiteSpace: "pre-line",
+          fontSize: fontSize,
+          margin: 0,
+          // padding: 20,
+          paddingTop: paddingTop,
+          width: "100%",
+          textTransform: "uppercase"
+        }}
+      >{label}</h4>
+    )
+  }
   return (
     <h4
       style={{

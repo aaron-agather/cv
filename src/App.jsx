@@ -4,6 +4,7 @@ import { H0Custom, H1Custom, H2Custom, H3Custom, H4Custom, SectionName, CText, C
 import { CCircle, Line } from './comp/shapes';
 import { CSpacer, ListToView } from './comp/utils';
 import { MotherboardAnimation } from './comp/gsap motherboard';
+import { G_H4Custom, G_MH4Custom } from './comp/gsap text';
 
 import './App.css'
 
@@ -12,8 +13,8 @@ function App() {
   return (
     <section id="parent">
       <section id="left">
-        <H4Custom label="Aaron" cfont="Anurati" paddingTop="20px" color="white" fontSize={50}/>
-        <H4Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" fontSize={50}/>
+        <H4Custom label="Aaron" cfont="Anurati" paddingTop="50px" color="white" fontSize={40} uppdercase={true}/>
+        <G_H4Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" fontSize={40} animation_color="white" uppdercase={true}/>
         <CSpacer height={50} />
         <SectionName label="contact" />
         <Line />
@@ -50,6 +51,15 @@ function App() {
         {/* <div style={{ width: "100vw", height: "100vh" }}>
           <MotherboardAnimation />
         </div>*/}
+        <G_MH4Custom
+          label="TEST12345678910"
+          slabel="test"
+          color="red"
+          scolor="yellow"
+          animation_color="blue"
+          sanimation_color="green"
+        />
+        
       </section>
 
       <div className="ticks"></div>
