@@ -13,8 +13,24 @@ function App() {
   return (
     <section id="parent">
       <section id="left">
-        <H4Custom label="Aaron" cfont="Anurati" paddingTop="50px" color="white" fontSize={40} uppdercase={true}/>
-        <G_H4Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" fontSize={40} animation_color="white" uppdercase={true}/>
+        <G_MH4Custom
+          label="Aaron"
+          cfont="Anurati"
+          paddingTop="50px"
+          color="white"
+          animation_color="color-mix(in oklab, white, purple 90%)"
+          fontSize={40}
+          uppdercase={true}
+          
+          slabel="Agather"
+          scfont="Anurati"
+          scolor="color-mix(in oklab, white, purple 90%)"
+          sanimation_color="white"
+          sfontSize={40}
+          Suppdercase={true}
+        />
+        {/* <H4Custom label="Aaron" cfont="Anurati" paddingTop="50px" color="white" fontSize={40} uppdercase={true}/>
+        <G_H4Custom label="Agather" cfont="Anurati" color="color-mix(in oklab, white, purple 90%)" fontSize={40} animation_color="white" uppdercase={true}/>*/}
         <CSpacer height={50} />
         <SectionName label="contact" />
         <Line />
@@ -51,14 +67,7 @@ function App() {
         {/* <div style={{ width: "100vw", height: "100vh" }}>
           <MotherboardAnimation />
         </div>*/}
-        <G_MH4Custom
-          label="TEST12345678910"
-          slabel="test"
-          color="red"
-          scolor="yellow"
-          animation_color="blue"
-          sanimation_color="green"
-        />
+        
         
       </section>
 
