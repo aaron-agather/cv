@@ -38,6 +38,7 @@ function App() {
           <CSpacer height={50} />
           <SectionName label="contact" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true}/>
           <Line color="color-mix(in oklab, white 50%, purple)" />
+          <CSpacer height='10px' />
           <H3Custom label="+45 71 54 38 03" color="white" />
           <div
             style={{
@@ -49,9 +50,10 @@ function App() {
             <CLink label="Portfolio" color="white" fontSize={20} link="https://aaron-agather.github.io/portfolio/" />
             <CLink label="9800 Hjørring" color="white" fontSize={20} link="https://maps.app.goo.gl/N7tH8EU69WS5i91a7"/>
           </div>
-          <CSpacer height="100px" />
-          <SectionName label="skills" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true}/>
+          <CSpacer height="20px" />
+          <SectionName label="skills" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true} />
           <Line color="color-mix(in oklab, white 50%, purple)"/>
+          <CSpacer height='10px' />
           <ListToView list={[
             { name: "Photoshop", progress: 80 },
             { name: "Illustrator", progress: 80 },
@@ -62,7 +64,8 @@ function App() {
             { name: "React", progress: 10 },
           ]} />
           <CSpacer height="30px" />
-          <SectionName label="languages" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true}/>
+          <SectionName label="languages" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true} />
+          <CSpacer height='10px' />
           <Line color="color-mix(in oklab, white 50%, purple)" />
           <ListToView
             list={[
@@ -75,7 +78,7 @@ function App() {
         <CircuitBoardBackground
           speed={0.2}
           color='purple'
-          lineCount={10}
+          lineCount={15}
           opacity={.5}
           glowStrength={10} />
       </section>
