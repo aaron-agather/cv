@@ -65,13 +65,13 @@ function App() {
           ]} />
           <CSpacer height="30px" />
           <SectionName label="languages" color="color-mix(in oklab, white 50%, purple)" fontSize={20} uppdercase={true} />
-          <CSpacer height='10px' />
           <Line color="color-mix(in oklab, white 50%, purple)" />
+          <CSpacer height='10px' />
           <ListToView
             list={[
               { name: "German", progress: 100 },
               { name: "English", progress: 100 },
-              { name: "Danish", progress: 15 }
+              { name: "Danish", progress: 40 }
           ]}
           />
         </div>
